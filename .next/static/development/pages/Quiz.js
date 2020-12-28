@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/Quiz.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/quiz.js"],{
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -5568,21 +5568,21 @@ exports.formatWithValidation = formatWithValidation;
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FQuiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2FQuiz.tsx!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx!./":
 /*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FQuiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2FQuiz.tsx ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx ***!
   \*****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/Quiz", function() {
-      var page = __webpack_require__(/*! ./pages/Quiz.tsx */ "./pages/Quiz.tsx")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/quiz", function() {
+      var page = __webpack_require__(/*! ./pages/quiz.tsx */ "./pages/quiz.tsx")
       if(true) {
-        module.hot.accept(/*! ./pages/Quiz.tsx */ "./pages/Quiz.tsx", function() {
-          if(!next.router.components["/Quiz"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/Quiz.tsx */ "./pages/Quiz.tsx")
-          next.router.update("/Quiz", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/quiz.tsx */ "./pages/quiz.tsx", function() {
+          if(!next.router.components["/quiz"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/quiz.tsx */ "./pages/quiz.tsx")
+          next.router.update("/quiz", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -9932,9 +9932,9 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/Quiz.tsx":
+/***/ "./pages/quiz.tsx":
 /*!************************!*\
-  !*** ./pages/Quiz.tsx ***!
+  !*** ./pages/quiz.tsx ***!
   \************************/
 /*! exports provided: Quiz, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9956,7 +9956,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/Quiz.tsx";
+var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/quiz.tsx";
 
 
 
@@ -10043,14 +10043,14 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FQuiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2FQuiz.tsx ***!
+  !*** multi next-client-pages-loader?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx ***!
   \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FQuiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2FQuiz.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FQuiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2FQuiz.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx!./");
 
 
 /***/ }),
@@ -10066,5 +10066,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=Quiz.js.map
+},[[2,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=quiz.js.map

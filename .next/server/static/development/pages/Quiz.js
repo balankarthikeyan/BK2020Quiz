@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -857,9 +857,9 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/Quiz.tsx":
+/***/ "./pages/quiz.tsx":
 /*!************************!*\
-  !*** ./pages/Quiz.tsx ***!
+  !*** ./pages/quiz.tsx ***!
   \************************/
 /*! exports provided: Quiz, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -881,7 +881,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/Quiz.tsx";
+var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/quiz.tsx";
 
 
 
@@ -968,14 +968,14 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
-  !*** multi ./pages/Quiz.tsx ***!
+  !*** multi ./pages/quiz.tsx ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/Quiz.tsx */"./pages/Quiz.tsx");
+module.exports = __webpack_require__(/*! /Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/quiz.tsx */"./pages/quiz.tsx");
 
 
 /***/ }),
@@ -1124,4 +1124,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=Quiz.js.map
+//# sourceMappingURL=quiz.js.map
