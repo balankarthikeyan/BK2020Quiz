@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -857,16 +857,16 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/about.tsx":
-/*!*************************!*\
-  !*** ./pages/about.tsx ***!
-  \*************************/
-/*! exports provided: AboutPage, default */
+/***/ "./pages/Quiz.tsx":
+/*!************************!*\
+  !*** ./pages/Quiz.tsx ***!
+  \************************/
+/*! exports provided: Quiz, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutPage", function() { return AboutPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Quiz", function() { return Quiz; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
@@ -881,22 +881,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/about.tsx";
+var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/Quiz.tsx";
 
 
 
-var AboutPage =
+var Quiz =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(AboutPage, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Quiz, _React$Component);
 
-  function AboutPage() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AboutPage);
+  function Quiz() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Quiz);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(AboutPage).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Quiz).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AboutPage, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Quiz, [{
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5__["createElement"]("main", {
@@ -960,22 +960,22 @@ function (_React$Component) {
     }
   }]);
 
-  return AboutPage;
+  return Quiz;
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 
-/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+/* harmony default export */ __webpack_exports__["default"] = (Quiz);
 
 /***/ }),
 
-/***/ 5:
-/*!*******************************!*\
-  !*** multi ./pages/about.tsx ***!
-  \*******************************/
+/***/ 4:
+/*!******************************!*\
+  !*** multi ./pages/Quiz.tsx ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/about.tsx */"./pages/about.tsx");
+module.exports = __webpack_require__(/*! /Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/Quiz.tsx */"./pages/Quiz.tsx");
 
 
 /***/ }),
@@ -1124,4 +1124,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=Quiz.js.map

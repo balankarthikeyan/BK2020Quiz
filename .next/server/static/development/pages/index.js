@@ -698,29 +698,29 @@ function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Home Page!"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "Following quiz provides Multiple Choice Questions (MCQs) related to Javascript Framework. You will have to read all the given answers and click over the correct answer. If you are not sure about the answer then you can check the answer using Show Answer button. You can use Next Quiz button to check new set of questions in the quiz."), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/Quiz",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "Home Page!"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, "Go to About Me")));
+  }, " Get Start "));
 }
 
 

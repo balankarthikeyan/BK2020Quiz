@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 
-class AboutPage extends React.Component {
+class Quiz extends React.Component {
   static getInitialProps() {
     const isServer = typeof window === 'undefined'
     return { isServer }
@@ -26,5 +26,5 @@ class AboutPage extends React.Component {
   }
 }
 
-export { AboutPage }
-export default AboutPage
+export { Quiz }
+export default Quiz
