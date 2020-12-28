@@ -74,6 +74,7 @@
     "**/public": true,
     "**/node_modules": true,
     "**/dist": true,
+    "**/.next": true,
     "**/package-lock.json": true,
     "**/yarn.lock": true,
     "**/*.json": true,

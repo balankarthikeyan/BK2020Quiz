@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -685,42 +685,66 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/index.tsx"
 
 
 
-var IconLoading =
+var Main =
 /*#__PURE__*/
-styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
-  displayName: "pages__IconLoading",
+styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.main.withConfig({
+  displayName: "pages__Main",
   componentId: "sc-1ltsz6q-0"
-})(["font-size:20vw;"]);
+})(["width:70%;margin:auto;text-align:center;"]);
+var Heading =
+/*#__PURE__*/
+styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.h1.withConfig({
+  displayName: "pages__Heading",
+  componentId: "sc-1ltsz6q-1"
+})(["font-size:4vw;margin:20px 0;"]);
+var Paragraph =
+/*#__PURE__*/
+styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.p.withConfig({
+  displayName: "pages__Paragraph",
+  componentId: "sc-1ltsz6q-2"
+})(["font-size:1vw;"]);
+var Button =
+/*#__PURE__*/
+styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button.withConfig({
+  displayName: "pages__Button",
+  componentId: "sc-1ltsz6q-3"
+})(["padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;"]);
 
 function Home() {
   var data = react__WEBPACK_IMPORTED_MODULE_0__["useContext"](_GlobalContext_context__WEBPACK_IMPORTED_MODULE_2__["QuizContext"]);
-  console.log(data);
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("main", {
+  console.log('---data', data);
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Main, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Heading, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 31
     },
     __self: this
-  }, "Home Page!"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", {
+  }, "Technical Quiz"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 32
     },
     __self: this
   }, "Following quiz provides Multiple Choice Questions (MCQs) related to Javascript Framework. You will have to read all the given answers and click over the correct answer. If you are not sure about the answer then you can check the answer using Show Answer button. You can use Next Quiz button to check new set of questions in the quiz."), react__WEBPACK_IMPORTED_MODULE_0__["createElement"](next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/quiz",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 33
     },
     __self: this
-  }, "Get Start"));
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Button, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, "Get Start")));
 }
 
 
@@ -728,7 +752,7 @@ function Home() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

@@ -12,7 +12,7 @@ import { createGlobalStyle } from 'styled-components'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import {QuizContext} from '../GlobalContext/context'
-import {GlobalFixture} from '../GlobalContext/GlobalFixture'
+// import {GlobalFixture} from '../GlobalContext/GlobalFixture'
 const AppGlobalStyles = createGlobalStyle`
   :root {
     --color-orange: white;
@@ -60,18 +60,24 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props
+    
+    const AppText = () => {
 
-    console.log(this.getData())
-
-    return (
-      <QuizContext.Provider value={GlobalFixture}>
+      const [fetchListData, setFetchListData] = React.useState(this.getData() || [])
+    
+      const contextProps = {fetchListData}
+      return <QuizContext.Provider value={contextProps}>
       <Container>
         <AppGlobalStyles />
         <Header />
+        
         <Component {...pageProps} />
         <Footer />
       </Container>
-      </QuizContext.Provider>
+    </QuizContext.Provider>
+    }
+    return (
+      <AppText />
     )
   }
 }
