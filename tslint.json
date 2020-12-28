@@ -1,0 +1,24 @@
+{
+  "extends": ["tslint-react", "tslint:recommended", "tslint-config-prettier"],
+  "rulesDirectory": [
+    "node_modules/tslint-microsoft-contrib",
+    "node_modules/tslint-clean-code/dist/src"
+  ],
+  "rules": {
+    "import-sources-order": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "interface-name": false,
+    "member-ordering": false
+  },
+  "linterOptions": {
+    "exclude": [
+      ".tmp/**/*",
+      "build/**/*",
+      "dist/**/*",
+      "config/**/*.js",
+      "node_modules/**/*.ts"
+    ]
+  }
+}

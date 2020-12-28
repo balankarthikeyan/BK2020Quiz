@@ -1,0 +1,9 @@
+{
+  //https://nextjs.org/docs#customizing-babel-config
+  //https://www.npmjs.com/package/@zeit/next-typescript
+  "presets": ["next/babel", "@zeit/next-typescript/babel"],
+  "plugins": [
+    ["babel-plugin-styled-components", {}, "babel-styled-components"],
+    ["styled-components", { "ssr": true, "pure": true, "displayName": false }]
+  ]
+}

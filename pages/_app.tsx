@@ -1,0 +1,70 @@
+/**
+ * @important @note
+ * - App component to initialize pages
+ * - Global components such as Header, Footer, Navigation Menu, Modals etc., can be added here
+ * - file name must be _app.js
+ * - path: pages/_app.js
+ * https://nextjs.org/docs#custom-app
+ */
+import * as React from 'react'
+import App, { Container } from 'next/app'
+import { createGlobalStyle } from 'styled-components'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+
+const AppGlobalStyles = createGlobalStyle`
+  :root {
+    --color-orange: white;
+  }
+
+  html {
+    box-sizing: border-box;
+    background-color: var(--color-orange);
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  html, body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding: 0;
+    font-family: "Roboto", "Arial", sans-serif, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+`
+
+class MyApp extends App {
+  static async getInitialProps({ Component, ctx }: any) {
+    let pageProps = {}
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
+
+    return { pageProps }
+  }
+
+  render() {
+    const { Component, pageProps } = this.props
+
+    return (
+      <Container>
+        <AppGlobalStyles />
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </Container>
+    )
+  }
+}
+
+export default MyApp

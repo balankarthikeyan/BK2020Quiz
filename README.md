@@ -1,2 +1,1 @@
-# BK2020Quiz
-BKQuiz
+#BKQuiz
