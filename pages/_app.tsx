@@ -54,8 +54,14 @@ class MyApp extends App {
     return { pageProps }
   }
 
+  getData() {
+    return require("../questions.json")
+  }
+
   render() {
     const { Component, pageProps } = this.props
+
+    console.log(this.getData())
 
     return (
       <QuizContext.Provider value={GlobalFixture}>

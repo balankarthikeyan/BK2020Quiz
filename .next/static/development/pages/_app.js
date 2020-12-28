@@ -13569,46 +13569,52 @@ function (_App) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(MyApp, [{
+    key: "getData",
+    value: function getData() {
+      return __webpack_require__(/*! ../questions.json */ "./questions.json");
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
+      console.log(this.getData());
       return react__WEBPACK_IMPORTED_MODULE_9__["createElement"](_GlobalContext_context__WEBPACK_IMPORTED_MODULE_14__["QuizContext"].Provider, {
         value: _GlobalContext_GlobalFixture__WEBPACK_IMPORTED_MODULE_15__["GlobalFixture"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9__["createElement"](next_app__WEBPACK_IMPORTED_MODULE_10__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 68
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9__["createElement"](AppGlobalStyles, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9__["createElement"](_components_Header__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 70
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9__["createElement"](Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 71
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9__["createElement"](_components_Footer__WEBPACK_IMPORTED_MODULE_13__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 72
         },
         __self: this
       })));
@@ -13663,6 +13669,17 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_10___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
+
+/***/ }),
+
+/***/ "./questions.json":
+/*!************************!*\
+  !*** ./questions.json ***!
+  \************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
+/***/ (function(module) {
+
+module.exports = [{"type":"TRUE_FALSE","level":1,"question":"In <em>X-Men</em>, Wolverine is able to turn into a ball of fire.","answers":["Fact","Fiction"],"correct":2,"explanation":"Wolverine has sharp claws and is very resilient."},{"type":"TRUE_FALSE","level":3,"question":"Superman�s high-school girlfriend was named Lana Lang.","answers":["Fact","Fiction"],"correct":1,"explanation":"Clark Kent was in love with Lana Lang. Then he went to Metropolis and fell in love with Lois Lane, the ace newspaper reporter."},{"type":"TRUE_FALSE","level":1,"question":"Venom was an enemy of Spider-Man�s.","answers":["Fact","Fiction"],"correct":1,"explanation":"Venom was one of many enemies Spider-Man faced."},{"type":"TRUE_FALSE","level":3,"question":"In the comics, Superman can be killed only by a silver bullet.","answers":["Fact","Fiction"],"correct":2,"explanation":"Superman cannot be harmed by anything dangerous to ordinary humans. He can be weakened, however, by exposure to green kryptonite."},{"type":"TRUE_FALSE","level":3,"question":"Kryptonite is a real element.","answers":["Fact","Fiction"],"correct":2,"explanation":"Kryptonite is an invention of the creators of the <em>Superman</em> cartoon strip. It first appeared in the 1940s."},{"type":"TRUE_FALSE","level":1,"question":"Batman is a superhero but has no superpowers.","answers":["Fact","Fiction"],"correct":1,"explanation":"Although called a superhero, the American comic book character Batman has no superhuman powers. Under his cowl, he is merely a rich man who has devoted his life to fighting crime."}];
 
 /***/ }),
 
