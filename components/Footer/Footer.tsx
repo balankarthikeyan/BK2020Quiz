@@ -4,7 +4,7 @@ import { FooterWrapper, Heading } from './styles'
 function Footer() {
   return (
     <FooterWrapper>
-      <Heading>Footer</Heading>
+      <Heading>Copyright © 2020 Quiz Inc. All rights reserved.</Heading>
     </FooterWrapper>
   )
 }

@@ -11,7 +11,8 @@ import App, { Container } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-
+import {QuizContext} from '../GlobalContext/context'
+import {GlobalFixture} from '../GlobalContext/GlobalFixture'
 const AppGlobalStyles = createGlobalStyle`
   :root {
     --color-orange: white;
@@ -57,12 +58,14 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
 
     return (
+      <QuizContext.Provider value={GlobalFixture}>
       <Container>
         <AppGlobalStyles />
         <Header />
         <Component {...pageProps} />
         <Footer />
       </Container>
+      </QuizContext.Provider>
     )
   }
 }

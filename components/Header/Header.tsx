@@ -4,7 +4,7 @@ import { HeaderWrapper, Heading, Logo } from './styles'
 function Header() {
   return (
     <HeaderWrapper>
-      <Heading>Header</Heading>
+      <Heading>QUIZ</Heading>
     </HeaderWrapper>
   )
 }
