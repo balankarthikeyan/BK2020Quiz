@@ -152,7 +152,7 @@ function Footer() {
 /*!************************************!*\
   !*** ./components/Footer/index.ts ***!
   \************************************/
-/*! exports provided: FooterWrapper, Heading, Footer, default */
+/*! exports provided: default, FooterWrapper, Heading, Footer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,7 +245,7 @@ function Header() {
 /*!************************************!*\
   !*** ./components/Header/index.ts ***!
   \************************************/
-/*! exports provided: HeaderWrapper, Heading, Logo, Header, default */
+/*! exports provided: default, HeaderWrapper, Heading, Logo, Header */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
