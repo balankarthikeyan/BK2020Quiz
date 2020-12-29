@@ -5,12 +5,13 @@ import styled from 'styled-components'
 
 const Main = styled.main`
   width: 70%;
-  margin: auto;
+  margin: 15vh auto;
   text-align: center;
 `
 const Heading = styled.h1`
   font-size: 4vw;
   margin: 20px 0;
+  
 `
 const Paragraph = styled.p`
   font-size: 1vw;
