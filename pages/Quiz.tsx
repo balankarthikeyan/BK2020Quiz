@@ -18,7 +18,7 @@ import exampleQuestions from '../data/exampleQuestions'
   width: 70%;
   margin: auto;
   text-align: center;
-  
+
   .button-ui{
       padding: 10px 20px;
       background: black;
@@ -37,6 +37,7 @@ import exampleQuestions from '../data/exampleQuestions'
 
     .selected {
       /* background-color:#ffaeae; */
+      border: 1px solid;
       &::after {
       content: 'Selected Wrong';
       padding-left:10px;
@@ -45,6 +46,12 @@ import exampleQuestions from '../data/exampleQuestions'
       }
     }
     .correct {
+      &::after {
+      content: 'Selected Correct';
+      padding-left:10px;
+      font-weight:bold;
+      color:green;
+      }
     /* background-color:#2cdc5c; */
   }
     .correct.selected {

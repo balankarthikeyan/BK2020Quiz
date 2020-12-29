@@ -14758,18 +14758,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{&::after{content:'Selected Wrong';padding-left:10px;font-weight:bold;color:red;}}.correct{}.correct.selected{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Selected Wrong';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 74
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 75
         },
         __self: this
       }));
