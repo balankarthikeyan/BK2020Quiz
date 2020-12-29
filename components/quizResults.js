@@ -66,7 +66,15 @@ class QuizResults extends React.Component {
       <div className="mw6 center tc">
         <h1 className="f4 gray">Answers</h1>
         {this.renderAnswers()}
-        <Link href="/">Back</Link>
+        <Link href="/">
+          <button className="button-ui">Back</button>
+        </Link>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     )
   }

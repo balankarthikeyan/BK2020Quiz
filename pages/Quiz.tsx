@@ -19,10 +19,20 @@ import exampleQuestions from '../data/exampleQuestions'
   margin: auto;
   text-align: center;
   
+  .button-ui{
+      padding: 10px 20px;
+      background: black;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1vw;
+      border: none;
+    }
 
   .answer-ui {
     width: 50%;
     margin: auto;
+
+    
     
 
     .selected {
