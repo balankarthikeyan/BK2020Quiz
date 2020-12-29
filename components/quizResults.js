@@ -1,3 +1,5 @@
+import React from 'react'
+import Link from 'next/link'
 import QuestionAnswer from './questionAnswer'
 
 class QuizResults extends React.Component {
@@ -17,6 +19,7 @@ class QuizResults extends React.Component {
           answer={answer}
           key={answerKey}
           id={index}
+          isResult={true}
           onAnswer={() => {}}
         />
       )

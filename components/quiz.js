@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Progress from './progress'
 import Question from './question'
 import BackButton from './backButton'
@@ -36,20 +37,11 @@ class QuizList extends React.Component {
       data,
     } = this.props
     const currentQuestion = questions[currentQuestionIndex - 1]
-    const subtitle = currentQuestion.subtitle
-      ? currentQuestion.subtitle
-      : data.subtitle
-      ? data.subtitle
-      : ''
 
     return (
       <div>
         <Progress current={currentQuestionIndex} total={totalQuestions} />
-        <Question
-          question={currentQuestion}
-          subtitle={subtitle}
-          onAnswer={this.handleAnswer}
-        />
+        <Question question={currentQuestion} onAnswer={this.handleAnswer} />
       </div>
     )
   }
@@ -60,7 +52,7 @@ class QuizList extends React.Component {
 
   render() {
     const {
-      data: { title, questions },
+      data: { questions },
     } = this.props
     const totalQuestions = questions.length
     const currentQuestionIndex = this.state.currentQuestion
@@ -80,9 +72,7 @@ class QuizList extends React.Component {
 
     return (
       <div id="quiz">
-        <h2 id="quiz-title" className="f2 tc">
-          {title}
-        </h2>
+        <h2 id="quiz-title" className="f2 tc" />
         {renderComponent}
         {renderBackButton}
       </div>
