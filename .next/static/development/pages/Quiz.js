@@ -83,6 +83,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js":
 /*!********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
@@ -457,6 +468,74 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableRest; });
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutProperties; });
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js");
+
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(source, excluded);
+  var key, i;
+
+  if (_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default.a) {
+    var sourceSymbolKeys = _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default()(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutPropertiesLoose; });
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+
+  var sourceKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(source);
+
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
 }
 
 /***/ }),
@@ -838,6 +917,19 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/cor
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/core-js/library/fn/object/get-own-property-symbols.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.symbol */ "./node_modules/core-js/library/modules/es6.symbol.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getOwnPropertySymbols;
 
 
 /***/ }),
@@ -13733,12 +13825,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _GlobalContext_context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../GlobalContext/context */ "./GlobalContext/context.tsx");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _GlobalContext_context__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../GlobalContext/context */ "./GlobalContext/context.tsx");
+
 
 
 
@@ -13752,86 +13846,124 @@ function QuizTemplate() {
   var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var Button =
   /*#__PURE__*/
-  styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].button.withConfig({
+  styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].button.withConfig({
     displayName: "quiz__Button",
     componentId: "sc-12jkv1r-0"
-  })(["padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;margin:5px;", ";"], function (props) {
-    return props.active && Object(styled_components__WEBPACK_IMPORTED_MODULE_5__["css"])(["background:red;color:black;"]);
+  })(["padding:10px 20px;background:#b2b2b2;color:black;text-transform:uppercase;font-size:1vw;border:none;margin:5px;", ";"], function (props) {
+    return props.active && Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["css"])(["background:black;color:white;"]);
   });
-  var _ref = props,
-      _ref$questionNumber = _ref.questionNumber,
-      questionNumber = _ref$questionNumber === void 0 ? 0 : _ref$questionNumber,
-      _ref$question = _ref.question,
-      question = _ref$question === void 0 ? 'text' : _ref$question,
-      _ref$answers = _ref.answers,
-      answers = _ref$answers === void 0 ? ['option 01', 'option 02'] : _ref$answers,
-      _ref$onToggle = _ref.onToggle,
-      onToggle = _ref$onToggle === void 0 ? function () {
-    return '';
-  } : _ref$onToggle;
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }, question), answers.length > 0 ? answers.map(function () {
-    var item = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 
-    var _React$useState = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState(false),
+  var ButtonGroup = function ButtonGroup(props) {
+    var _ref = props,
+        list = _ref.list,
+        _ref$activeMenuIdx = _ref.activeMenuIdx,
+        activeMenuIdx = _ref$activeMenuIdx === void 0 ? 0 : _ref$activeMenuIdx,
+        _ref$shouldToggle = _ref.shouldToggle,
+        shouldToggle = _ref$shouldToggle === void 0 ? false : _ref$shouldToggle,
+        renderTabItemMenu = _ref.renderTabItemMenu,
+        _ref$onToggle = _ref.onToggle,
+        onToggle = _ref$onToggle === void 0 ? function () {
+      return '';
+    } : _ref$onToggle,
+        _ref$questionNumber = _ref.questionNumber,
+        questionNumber = _ref$questionNumber === void 0 ? -1 : _ref$questionNumber,
+        remainingProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref, ["list", "activeMenuIdx", "shouldToggle", "renderTabItemMenu", "onToggle", "questionNumber"]);
+
+    var _React$useState = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(activeMenuIdx),
         _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
-        isVisible = _React$useState2[0],
-        setVisibility = _React$useState2[1];
+        activeTabIdx = _React$useState2[0],
+        setActiveTabIdx = _React$useState2[1];
 
-    var toggleVisibility = function toggleVisibility() {
-      setVisibility(function (currentVisibility) {
-        return !currentVisibility;
-      });
+    var onTabMenuClick = function onTabMenuClick(e) {
+      e.preventDefault();
+      var curMenuIdx = +e.currentTarget.getAttribute('data-key');
+
+      if (curMenuIdx === activeTabIdx && shouldToggle === true) {
+        setActiveTabIdx(-1);
+      } else {
+        setActiveTabIdx(curMenuIdx);
+      }
+
       onToggle({
-        index: index,
-        item: item,
-        question: question,
-        questionNumber: questionNumber
+        questionNumber: questionNumber,
+        answer: curMenuIdx
       });
     };
 
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, {
-      key: "button_".concat(index),
+    var renderButtonGroup = function renderButtonGroup(item, index) {
+      var title = item;
+      var titleClassName = 'button-menu-title' + (activeTabIdx === index ? " active".concat(!shouldToggle ? ' prevent' : '') : '');
+      var children = renderTabItemMenu !== undefined ? renderTabItemMenu(title, index) : title ? title : "Tab ".concat(index);
+      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, {
+        key: "button-menu-".concat(index),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
+        title: title,
+        className: titleClassName,
+        onClick: onTabMenuClick,
+        "data-key": index,
+        role: "navigation",
+        active: activeTabIdx === index,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, children));
+    };
+
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("section", {
+      className: "base-button-menu-panel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 86
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Button, {
-      active: isVisible,
-      onClick: function onClick(e) {
-        onToggle({
-          index: index,
-          item: item,
-          question: question,
-          questionNumber: questionNumber
-        });
-        toggleVisibility();
-      },
-      key: "".concat(index),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 34
-      },
-      __self: this
-    }, item));
-  }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null));
+    }, list && list.map(renderButtonGroup));
+  };
+
+  var onToggle = function onToggle(obj) {
+    props.onToggle(obj);
+  };
+
+  var _ref2 = props,
+      _ref2$questionNumber = _ref2.questionNumber,
+      questionNumber = _ref2$questionNumber === void 0 ? 0 : _ref2$questionNumber,
+      _ref2$question = _ref2.question,
+      question = _ref2$question === void 0 ? 'text' : _ref2$question,
+      _ref2$answers = _ref2.answers,
+      answers = _ref2$answers === void 0 ? ['option 01', 'option 02'] : _ref2$answers;
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, question), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(ButtonGroup, {
+    onToggle: onToggle,
+    questionNumber: questionNumber,
+    list: answers,
+    activeMenuIdx: -1,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }));
 }
 
-function QuizList() {
-  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_3___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_6__["QuizContext"]),
+function QuizList(props) {
+  var _React$useContext = react__WEBPACK_IMPORTED_MODULE_4___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_7__["QuizContext"]),
       _React$useContext$fet = _React$useContext.fetchListData,
       list = _React$useContext$fet === void 0 ? {} : _React$useContext$fet;
 
@@ -13839,75 +13971,89 @@ function QuizList() {
     var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     if (obj) {
-      list[obj.questionNumber].choosed = obj.index;
+      list[obj.questionNumber].choosed = obj.answer;
+      props.onChange();
     }
   };
 
   return list.length > 0 ? list.map(function (item, index) {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, {
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, {
       key: "item_".concat(index),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 115
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(QuizTemplate, {
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizTemplate, {
       questionNumber: index,
       answers: item.answers,
       question: item.question,
       onToggle: onToggle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 115
       },
       __self: this
     }));
-  }) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null);
+  }) : react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null);
 }
 
 function Quiz() {
   var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var Main =
   /*#__PURE__*/
-  styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].main.withConfig({
+  styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].main.withConfig({
     displayName: "quiz__Main",
     componentId: "sc-12jkv1r-1"
   })(["width:70%;margin:auto;text-align:center;"]);
   var Button =
   /*#__PURE__*/
-  styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].button.withConfig({
+  styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].button.withConfig({
     displayName: "quiz__Button",
     componentId: "sc-12jkv1r-2"
   })(["padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;margin:5px;margin-top:40px;"]);
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Main, {
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
+      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState3, 2),
+      isActive = _React$useState4[0],
+      setIsActive = _React$useState4[1];
+
+  var _React$useContext2 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_7__["QuizContext"]),
+      _React$useContext2$fe = _React$useContext2.fetchListData,
+      fetchListData = _React$useContext2$fe === void 0 ? [] : _React$useContext2$fe;
+
+  var onChange = function onChange() {};
+
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Main, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 146
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 147
     },
     __self: this
-  }, "About Page"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(QuizList, {
+  }, "Select Any One Option"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizList, {
+    onChange: onChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 149
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+  }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/result",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 150
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Button, {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 151
     },
     __self: this
   }, " Submit ")));

@@ -13807,7 +13807,7 @@ function Home() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 0:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Findex.tsx ***!
   \******************************************************************************************************************************************/
@@ -13830,5 +13830,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
