@@ -31,7 +31,14 @@ import stub from '../data/stub'
     border: 1px solid;
     padding: 6px;
     min-width: 60%;
-     margin-bottom: 10px; 
+    margin-bottom: 10px; 
+    cursor: pointer;
+    font-size: 1vw;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
 }
 
   .answer-ui {

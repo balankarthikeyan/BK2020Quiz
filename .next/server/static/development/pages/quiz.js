@@ -1721,18 +1721,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}button.choose-button{background:transparent;border:1px solid;padding:6px;min-width:60%;margin-bottom:10px;}.answer-ui{width:50%;margin:auto;.selected::before{content:'\u2713';position:absolute;left:5px;width:10px;height:10px;border-radius:100%;}.selected,.correct{padding:6px;position:relative;}.selected{border:1px solid;border-color:red;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{border:1px solid;border-color:green;&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{border:1px solid;border-color:green;&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}button.choose-button{background:transparent;border:1px solid;padding:6px;min-width:60%;margin-bottom:10px;cursor:pointer;font-size:1vw;&:hover{background:black;color:white;}}.answer-ui{width:50%;margin:auto;.selected::before{content:'\u2713';position:absolute;left:5px;width:10px;height:10px;border-radius:100%;}.selected,.correct{padding:6px;position:relative;}.selected{border:1px solid;border-color:red;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{border:1px solid;border-color:green;&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{border:1px solid;border-color:green;&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 103
         },
         __self: this
       }));
