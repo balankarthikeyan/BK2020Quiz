@@ -39,9 +39,7 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/backB
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _progressBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./progressBar */ "./components/progressBar.js");
 var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/progress.js";
-
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var current = _ref.current,
@@ -51,144 +49,18 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/progr
     className: "tc",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 2
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "f4 gray",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 3
     },
     __self: this
   }, "Part ", current, " of ", total));
 });
-
-/***/ }),
-
-/***/ "./components/progressBar.js":
-/*!***********************************!*\
-  !*** ./components/progressBar.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/progressBar.js";
-
-
-var ProgressBarMark = function ProgressBarMark(_ref) {
-  var filled = _ref.filled;
-  var className = filled ? 'fa fa-circle fa-2x filled' : 'fa fa-2x fa-circle';
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "mark",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
-    className: className,
-    "aria-hidden": "true",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }));
-};
-
-var ProgressBar =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(ProgressBar, _React$Component);
-
-  function ProgressBar() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ProgressBar);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(ProgressBar).call(this));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(ProgressBar, [{
-    key: "renderMarks",
-    value: function renderMarks() {
-      var _this$props = this.props,
-          current = _this$props.current,
-          total = _this$props.total;
-      var marks = [];
-
-      for (var i = 0; i < total; i++) {
-        var filled = i < current;
-        marks.push(react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(ProgressBarMark, {
-          filled: filled,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23
-          },
-          __self: this
-        }));
-      }
-
-      return marks;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          current = _this$props2.current,
-          total = _this$props2.total,
-          _this$props2$colour = _this$props2.colour,
-          colour = _this$props2$colour === void 0 ? 'bg-blue' : _this$props2$colour;
-      var currentValue = (current - 1) / total * 100;
-      var styleWidth = "".concat(currentValue, "%");
-      console.log(styleWidth);
-      var progressBarClass = "".concat(colour, " br-pill h1 shadow-1");
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "bg-moon-gray br-pill h1 overflow-y-hidden center w-50",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: progressBarClass,
-        style: {
-          width: styleWidth
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(ProgressBarMark, {
-        filled: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return ProgressBar;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
-
-;
-/* harmony default export */ __webpack_exports__["default"] = (ProgressBar);
 
 /***/ }),
 
