@@ -3,11 +3,17 @@ import Link from 'next/link'
 import styled, {css} from 'styled-components'
 import {QuizContext} from '../GlobalContext/context'
 
+
+
+
+
+
+
 function QuizTemplate(props = {}) {
   const Button = styled.button`
     padding: 10px 20px;
-    background: black;
-    color: white;
+    background: #b2b2b2;
+    color: black;
     text-transform: uppercase;
     font-size: 1vw;
     border: none;
@@ -15,30 +21,83 @@ function QuizTemplate(props = {}) {
     ${(props) =>
       props.active &&
       css`
-      background: red;
-      color: black;
+      background: black;
+    color: white;
       `};
   `
+
+  let pushed = []
+
+
+const  ButtonGroup = (props: any) => {
+  const {
+    list,
+    activeMenuIdx = 0,
+    shouldToggle = false,
+    renderTabItem,
+    renderTabItemMenu,
+    renderTabItemContent,
+    ...remainingProps
+  } = props
+  const [activeTabIdx, setActiveTabIdx] = React.useState(activeMenuIdx)
+
+  const onTabMenuClick = (e: any) => {
+    e.preventDefault()
+    const curMenuIdx = +e.currentTarget.getAttribute('data-key')
+    if (curMenuIdx === activeTabIdx && shouldToggle === true) {
+      setActiveTabIdx(-1)
+    } else {
+      setActiveTabIdx(curMenuIdx)
+    }
+  }
+
+  const renderButtonGroup = (item: any, index: number) => {
+    const title = item
+    const titleClassName =
+      'button-menu-title' +
+      (activeTabIdx === index
+        ? ` active${!shouldToggle ? ' prevent' : ''}`
+        : '')
+    const children =
+      renderTabItemMenu !== undefined
+        ? renderTabItemMenu(title, index)
+        : title
+        ? title
+        : `Tab ${index}`
+
+    return (
+      <React.Fragment key={`button-menu-${index}`}>
+        <Button
+          title={title}
+          className={titleClassName}
+          onClick={onTabMenuClick}
+          data-key={index}
+          role="navigation"
+          active={activeTabIdx === index}
+        >
+          {children}
+        </Button>
+      </React.Fragment>
+    )
+  }
+
+
+
+
+  return (
+      <section className="base-button-menu-panel">
+        {list && list.map(renderButtonGroup)}
+      </section>
+  )
+}
+
+
   
   const { questionNumber = 0, question = 'text', answers = ['option 01', 'option 02'], onToggle = () => '' as any} = props as any
   return <div>
           <h1>{question}</h1>
-          {answers.length > 0 ? answers.map((item = '', index = 0) => {
-          const [isVisible, setVisibility] = React.useState(false);
-          const toggleVisibility = ()  => {
-            setVisibility(currentVisibility => !currentVisibility);
-            onToggle({index,item, question, questionNumber })
-            
-          }
-        return <React.Fragment key={`button_${index}`}>
-                <Button active={isVisible} onClick={(e) => {
-                  onToggle({index,item, question, questionNumber})
-                  toggleVisibility()
-                }} key={`${index}`}>
-                    {item}
-                </Button> 
-              </React.Fragment>
-          }) : <></>}
+          <ButtonGroup list={answers} activeMenuIdx={-1} />
+          
         </div>
 }
 
@@ -72,9 +131,11 @@ const Button = styled.button`
    
   `
 
+const config = [{}, {}, {}, {}, {}]
   return (
     <Main>
-    <h1>About Page</h1>
+    <h1>Select Any One Option</h1>
+    
     <QuizList />
     <Link href="/result">
         <Button> Submit </Button>
