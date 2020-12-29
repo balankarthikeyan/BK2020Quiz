@@ -39,7 +39,7 @@ import exampleQuestions from '../data/exampleQuestions'
       /* background-color:#ffaeae; */
       border: 1px solid;
       &::after {
-      content: 'Selected Wrong';
+      content: 'Incorrect';
       padding-left:10px;
       font-weight:bold;
       color:red;
@@ -47,7 +47,7 @@ import exampleQuestions from '../data/exampleQuestions'
     }
     .correct {
       &::after {
-      content: 'Selected Correct';
+      content: 'Correct';
       padding-left:10px;
       font-weight:bold;
       color:green;
@@ -56,7 +56,7 @@ import exampleQuestions from '../data/exampleQuestions'
   }
     .correct.selected {
       &::after {
-      content: 'Selected Correct';
+      content: ' Correct';
       padding-left:10px;
       font-weight:bold;
       color:green;
@@ -76,6 +76,8 @@ import exampleQuestions from '../data/exampleQuestions'
         </Main>
       )
   }
-}export { Quiz }
+}
+
+export { Quiz }
 export default Quiz
 

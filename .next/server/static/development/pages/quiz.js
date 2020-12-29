@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1722,7 +1722,7 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Selected Wrong';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
@@ -1774,7 +1774,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/quiz.tsx ***!
   \******************************/

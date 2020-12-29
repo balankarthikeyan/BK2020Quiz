@@ -14758,7 +14758,7 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Selected Wrong';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
@@ -14810,7 +14810,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fquiz&absolutePagePath=%2FUsers%2Fkarthikeyan.b15%2FPersonal%2FQuiz%2FBKQuiz%2Fpages%2Fquiz.tsx ***!
   \*********************************************************************************************************************************************/
@@ -14833,5 +14833,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=quiz.js.map
