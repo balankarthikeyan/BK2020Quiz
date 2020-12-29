@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -241,7 +241,8 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/quest
       lineNumber: 12
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "choose-button",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -549,40 +550,38 @@ function (_React$Component) {
       var _this$props = this.props,
           questions = _this$props.data.questions,
           answers = _this$props.answers;
-      console.log(questions);
       return questions.map(function (question, index) {
         var questionAnswerIndex = answers[index];
         var answer = question.answers[questionAnswerIndex];
         var answerKey = "answer=".concat(index);
         var title = question.title;
-        console.log(questionAnswerIndex);
         var className = '';
         className = "".concat(questionAnswerIndex === question.correct === true ? 'correct' : 'incorrect');
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           className: "card-ui",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 26
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31
+            lineNumber: 27
           },
           __self: this
         }, title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           className: " answer-ui",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 28
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           className: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 29
           },
           __self: this
         }, question.answers.map(function (itemAnswer, answeIndex) {
@@ -590,7 +589,7 @@ function (_React$Component) {
             className: "".concat(answeIndex === question.correct ? 'correct' : '', " ").concat(answeIndex === questionAnswerIndex ? 'selected' : ''),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 32
             },
             __self: this
           }, itemAnswer);
@@ -607,31 +606,55 @@ function (_React$Component) {
         className: "mw6 center tc",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 62
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "f4 gray",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 63
         },
         __self: this
       }, "Answers"), this.renderAnswers(), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
         className: "button-ui",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         },
         __self: this
       }, "Back")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 72
@@ -641,30 +664,6 @@ function (_React$Component) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 73
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 76
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
         },
         __self: this
       }));
@@ -1722,18 +1721,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}.answer-ui{width:50%;margin:auto;.selected{border:1px solid;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.button-ui{padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;}button.choose-button{background:transparent;border:1px solid;padding:6px;min-width:60%;margin-bottom:10px;}.answer-ui{width:50%;margin:auto;.selected::before{content:'\u2713';position:absolute;left:5px;width:10px;height:10px;border-radius:100%;}.selected,.correct{padding:6px;position:relative;}.selected{border:1px solid;border-color:red;&::after{content:'Incorrect';padding-left:10px;font-weight:bold;color:red;}}.correct{border:1px solid;border-color:green;&::after{content:'Correct';padding-left:10px;font-weight:bold;color:green;}}.correct.selected{border:1px solid;border-color:green;&::after{content:' Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 97
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 98
         },
         __self: this
       }));
@@ -1774,7 +1773,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/quiz.tsx ***!
   \******************************/

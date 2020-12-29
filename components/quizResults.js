@@ -9,15 +9,11 @@ class QuizResults extends React.Component {
       answers,
     } = this.props
 
-    console.log(questions)
-
     return questions.map((question, index) => {
       const questionAnswerIndex = answers[index]
       const answer = question.answers[questionAnswerIndex]
       const answerKey = `answer=${index}`
       const { title } = question
-
-      console.log(questionAnswerIndex)
 
       let className = ''
       className = `${
