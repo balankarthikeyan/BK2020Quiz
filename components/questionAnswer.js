@@ -10,7 +10,7 @@ export default ({ answer, onAnswer, id, correct, isResult = false }) => {
   return (
     <div className={`${className} answer-ui`} onClick={() => onAnswer(id)}>
       <div className="">
-        <p>{answer}</p>
+        <button className="choose-button">{answer}</button>
       </div>
     </div>
   )

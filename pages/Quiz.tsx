@@ -27,6 +27,13 @@ import exampleQuestions from '../data/exampleQuestions'
       font-size: 1vw;
       border: none;
     }
+    button.choose-button {
+    background: transparent;
+    border: 1px solid;
+    padding: 6px;
+    min-width: 60%;
+     margin-bottom: 10px; 
+}
 
   .answer-ui {
     width: 50%;
@@ -34,10 +41,23 @@ import exampleQuestions from '../data/exampleQuestions'
 
     
     
+  .selected::before {
+    content: '✓';
+    position: absolute;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
 
+    .selected, .correct {
+      padding: 6px;
+      position: relative;
+    }
     .selected {
       /* background-color:#ffaeae; */
       border: 1px solid;
+      border-color:red;
       &::after {
       content: 'Incorrect';
       padding-left:10px;
@@ -46,15 +66,18 @@ import exampleQuestions from '../data/exampleQuestions'
       }
     }
     .correct {
+      border: 1px solid;
+      border-color:green;
       &::after {
       content: 'Correct';
       padding-left:10px;
       font-weight:bold;
       color:green;
       }
-    /* background-color:#2cdc5c; */
   }
     .correct.selected {
+      border: 1px solid;
+      border-color:green;
       &::after {
       content: ' Correct';
       padding-left:10px;
