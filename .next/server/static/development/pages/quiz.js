@@ -549,30 +549,46 @@ function (_React$Component) {
       var _this$props = this.props,
           questions = _this$props.data.questions,
           answers = _this$props.answers;
+      console.log(questions);
       return questions.map(function (question, index) {
         var questionAnswerIndex = answers[index];
         var answer = question.answers[questionAnswerIndex];
         var answerKey = "answer=".concat(index);
         var title = question.title;
+        console.log(questionAnswerIndex);
+        var className = '';
+        className = "".concat(questionAnswerIndex === question.correct === true ? 'correct' : 'incorrect');
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 31
           },
           __self: this
-        }, title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_questionAnswer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          correct: questionAnswerIndex === question.correct,
-          answer: answer,
-          key: answerKey,
-          id: index,
-          isResult: true,
-          onAnswer: function onAnswer() {},
+        }, title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: " answer-ui",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 32
           },
           __self: this
-        }));
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33
+          },
+          __self: this
+        }, question.answers.map(function (itemAnswer, answeIndex) {
+          console.log();
+          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+            className: "".concat(answeIndex === question.correct ? 'correct' : '', " ").concat(answeIndex === questionAnswerIndex ? 'selected' : ''),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            },
+            __self: this
+          }, itemAnswer);
+        }))));
       });
     }
   }, {
@@ -585,21 +601,21 @@ function (_React$Component) {
         className: "mw6 center tc",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "f4 gray",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 68
         },
         __self: this
       }, "Answers"), this.renderAnswers(), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 70
         },
         __self: this
       }, "Back"));
@@ -1665,18 +1681,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.correct{background-color:#2cdc5c;}.incorrect{background-color:#ffaeae;}.answer-ui{width:60%;margin:auto;}"]);
+      })(["width:70%;margin:auto;text-align:center;.answer-ui{width:60%;margin:auto;.selected{background-color:#ffaeae;&::before{content:'Selected Wrong';padding-right:10px;font-weight:bold;color:red;}}.correct{background-color:#2cdc5c;}.correct.selected{&::before{content:'Selected Correct';padding-right:10px;font-weight:bold;color:black;}}}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 52
         },
         __self: this
       }));

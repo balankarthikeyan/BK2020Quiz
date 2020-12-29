@@ -9,22 +9,50 @@ class QuizResults extends React.Component {
       answers,
     } = this.props
 
+    console.log(questions)
+
     return questions.map((question, index) => {
       const questionAnswerIndex = answers[index]
       const answer = question.answers[questionAnswerIndex]
       const answerKey = `answer=${index}`
       const { title } = question
+
+      console.log(questionAnswerIndex)
+
+      let className = ''
+      className = `${
+        (questionAnswerIndex === question.correct) === true
+          ? 'correct'
+          : 'incorrect'
+      }`
+
       return (
         <>
           <h2>{title}</h2>
-          <QuestionAnswer
+          <div className={` answer-ui`}>
+            <div className="">
+              {question.answers.map((itemAnswer, answeIndex) => {
+                console.log()
+                return (
+                  <p
+                    className={`${
+                      answeIndex === question.correct ? 'correct' : ''
+                    } ${answeIndex === questionAnswerIndex ? 'selected' : ''}`}
+                  >
+                    {itemAnswer}
+                  </p>
+                )
+              })}
+            </div>
+          </div>
+          {/* <QuestionAnswer
             correct={questionAnswerIndex === question.correct}
             answer={answer}
             key={answerKey}
             id={index}
             isResult={true}
             onAnswer={() => {}}
-          />
+          /> */}
         </>
       )
     })

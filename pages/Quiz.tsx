@@ -18,16 +18,32 @@ import exampleQuestions from '../data/exampleQuestions'
   width: 70%;
   margin: auto;
   text-align: center;
-   .correct {
-    background-color:#2cdc5c;
-  }
-  .incorrect {
-    background-color:#ffaeae;
-  } 
+  
 
   .answer-ui {
     width: 60%;
     margin: auto;
+
+    .selected {
+      background-color:#ffaeae;
+      &::before {
+      content: 'Selected Wrong';
+      padding-right:10px;
+      font-weight:bold;
+      color:red;
+      }
+    }
+    .correct {
+    background-color:#2cdc5c;
+  }
+    .correct.selected {
+      &::before {
+      content: 'Selected Correct';
+      padding-right:10px;
+      font-weight:bold;
+      color:black;
+      }
+    }
   }
 `
 
