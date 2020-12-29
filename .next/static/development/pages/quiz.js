@@ -584,10 +584,10 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./data/exampleQuestions.js":
-/*!**********************************!*\
-  !*** ./data/exampleQuestions.js ***!
-  \**********************************/
+/***/ "./data/stub.js":
+/*!**********************!*\
+  !*** ./data/stub.js ***!
+  \**********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14724,7 +14724,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/quiz.js */ "./components/quiz.js");
-/* harmony import */ var _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../data/exampleQuestions */ "./data/exampleQuestions.js");
+/* harmony import */ var _data_stub__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../data/stub */ "./data/stub.js");
 
 
 
@@ -14761,14 +14761,14 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 95
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 96
         },
         __self: this
       }));
@@ -14783,7 +14783,7 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_10__["default"]);
+                return _context.abrupt("return", _data_stub__WEBPACK_IMPORTED_MODULE_10__["default"]);
 
               case 1:
               case "end":
