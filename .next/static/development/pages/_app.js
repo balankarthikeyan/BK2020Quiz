@@ -151,7 +151,7 @@ function Header() {
 /*!************************************!*\
   !*** ./components/Header/index.ts ***!
   \************************************/
-/*! exports provided: HeaderWrapper, Heading, Logo, Header, default */
+/*! exports provided: HeaderWrapper, Heading, Logo, default, Header */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
