@@ -13,15 +13,19 @@ class QuizResults extends React.Component {
       const questionAnswerIndex = answers[index]
       const answer = question.answers[questionAnswerIndex]
       const answerKey = `answer=${index}`
+      const { title } = question
       return (
-        <QuestionAnswer
-          correct={questionAnswerIndex === question.correct}
-          answer={answer}
-          key={answerKey}
-          id={index}
-          isResult={true}
-          onAnswer={() => {}}
-        />
+        <>
+          <h2>{title}</h2>
+          <QuestionAnswer
+            correct={questionAnswerIndex === question.correct}
+            answer={answer}
+            key={answerKey}
+            id={index}
+            isResult={true}
+            onAnswer={() => {}}
+          />
+        </>
       )
     })
   }
@@ -33,8 +37,9 @@ class QuizResults extends React.Component {
 
     return (
       <div className="mw6 center tc">
-        <p className="f4 gray">Answers</p>
+        <h1 className="f4 gray">Answers</h1>
         {this.renderAnswers()}
+        <Link href="/">Back</Link>
       </div>
     )
   }

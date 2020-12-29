@@ -5,6 +5,6 @@ export default ({ current, total }) => (
     <p className="f4 gray">
       Part {current} of {total}
     </p>
-    <ProgressBar current={current} total={total} colour="bg-green" />
+    {/* <ProgressBar current={current} total={total} colour="bg-green" /> */}
   </div>
 )

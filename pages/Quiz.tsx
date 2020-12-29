@@ -14,8 +14,25 @@ import exampleQuestions from '../data/exampleQuestions'
   }
 
   render () {
+    const Main = styled.main`
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  .correct, .incorrect {
+    padding: 10px;
+  }
+  /* .correct {
+    background-color:green;
+  }
+  .incorrect {
+    background-color:red;
+  } */
+`
+
       return(
+        <Main>
              <QuizList data={this.props} />
+        </Main>
       )
   }
 }export { Quiz }

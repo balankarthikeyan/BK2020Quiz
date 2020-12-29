@@ -74,7 +74,7 @@ class QuizList extends React.Component {
       <div id="quiz">
         <h2 id="quiz-title" className="f2 tc" />
         {renderComponent}
-        {renderBackButton}
+        {/* {renderBackButton} */}
       </div>
     )
   }

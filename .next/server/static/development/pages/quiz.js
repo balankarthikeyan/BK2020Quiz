@@ -154,16 +154,7 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/progr
       lineNumber: 5
     },
     __self: this
-  }, "Part ", current, " of ", total), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_progressBar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    current: current,
-    total: total,
-    colour: "bg-green",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }));
+  }, "Part ", current, " of ", total));
 });
 
 /***/ }),
@@ -313,7 +304,7 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/quest
   var question = _ref.question,
       onAnswer = _ref.onAnswer;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "question w-75 center",
+    className: "question",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4
@@ -372,30 +363,16 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/quest
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dtc w3 f1",
+    className: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "dark-gray fa fa-2x fa-check-circle-o",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "dtc v-mid pl3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 13
     },
     __self: this
   }, answer)));
@@ -419,16 +396,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _questionAnswer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./questionAnswer */ "./components/questionAnswer.js");
+/* harmony import */ var _questionAnswer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./questionAnswer */ "./components/questionAnswer.js");
 
 
 
 
 
 var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/questionAnswerContainer.js";
-
 
 
 
@@ -446,18 +420,20 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(QuestionAnswerContainer, [{
     key: "renderAnswers",
     value: function renderAnswers() {
-      var onAnswer = this.props.onAnswer;
-      var answers = this.props.question.answers;
+      var _this$props = this.props,
+          onAnswer = _this$props.onAnswer,
+          question = _this$props.question;
+      var answers = question.answers;
       return answers.map(function (answer, index) {
         var answerKey = "answer=".concat(index);
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_questionAnswer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_questionAnswer__WEBPACK_IMPORTED_MODULE_6__["default"], {
           answer: answer,
           key: answerKey,
           id: index,
           onAnswer: onAnswer,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 11
           },
           __self: this
         });
@@ -466,14 +442,25 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this$props2 = this.props,
+          onAnswer = _this$props2.onAnswer,
+          question = _this$props2.question;
+      var answers = question.answers,
+          title = question.title;
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "mw6 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 25
         },
         __self: this
-      }, this.renderAnswers());
+      }, title && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, title), this.renderAnswers());
     }
   }]);
 
@@ -633,7 +620,7 @@ function (_React$Component) {
           lineNumber: 75
         },
         __self: this
-      }), renderComponent, renderBackButton);
+      }), renderComponent);
     }
   }]);
 
@@ -694,7 +681,14 @@ function (_React$Component) {
         var questionAnswerIndex = answers[index];
         var answer = question.answers[questionAnswerIndex];
         var answerKey = "answer=".concat(index);
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_questionAnswer__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        var title = question.title;
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19
+          },
+          __self: this
+        }, title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_questionAnswer__WEBPACK_IMPORTED_MODULE_7__["default"], {
           correct: questionAnswerIndex === question.correct,
           answer: answer,
           key: answerKey,
@@ -703,10 +697,10 @@ function (_React$Component) {
           onAnswer: function onAnswer() {},
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17
+            lineNumber: 20
           },
           __self: this
-        });
+        }));
       });
     }
   }, {
@@ -719,17 +713,24 @@ function (_React$Component) {
         className: "mw6 center tc",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 39
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "f4 gray",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 40
         },
         __self: this
-      }, "Answers"), this.renderAnswers());
+      }, "Answers"), this.renderAnswers(), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "Back"));
     }
   }]);
 
@@ -1740,8 +1741,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/quiz.js */ "./components/quiz.js");
-/* harmony import */ var _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../data/exampleQuestions */ "./data/exampleQuestions.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_quiz_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/quiz.js */ "./components/quiz.js");
+/* harmony import */ var _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../data/exampleQuestions */ "./data/exampleQuestions.js");
 
 
 
@@ -1750,6 +1753,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/pages/quiz.tsx";
+
 
 
 
@@ -1768,14 +1772,26 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Quiz, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      var Main =
+      /*#__PURE__*/
+      styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.main.withConfig({
+        displayName: "quiz__Main",
+        componentId: "sc-12jkv1r-0"
+      })(["width:70%;margin:auto;text-align:center;.correct,.incorrect{padding:10px;}"]);
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 34
         },
         __self: this
-      });
+      }));
     }
   }], [{
     key: "getInitialProps",
@@ -1787,7 +1803,7 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                return _context.abrupt("return", _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_9__["default"]);
+                return _context.abrupt("return", _data_exampleQuestions__WEBPACK_IMPORTED_MODULE_10__["default"]);
 
               case 1:
               case "end":
@@ -2009,6 +2025,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("regenerator-runtime");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ }),
 
