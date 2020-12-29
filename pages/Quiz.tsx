@@ -25,14 +25,15 @@ function QuizTemplate(props:any = {}) {
     color: white;
       `};
   `
-  let pushed = []
 
-  const  ButtonGroup = (props: any) => {
+  const ButtonGroup = (props: any) => {
     const {
       list,
       activeMenuIdx = 0,
       shouldToggle = false,
       renderTabItemMenu,
+      onToggle = () => '',
+      questionNumber = -1,
       ...remainingProps
     } = props as any
     const [activeTabIdx, setActiveTabIdx] = React.useState(activeMenuIdx)
@@ -45,6 +46,7 @@ function QuizTemplate(props:any = {}) {
       } else {
         setActiveTabIdx(curMenuIdx)
       }
+      onToggle({questionNumber, answer:curMenuIdx})
     }
 
     const renderButtonGroup = (item: any, index: number) => {
@@ -87,22 +89,27 @@ function QuizTemplate(props:any = {}) {
     )
   }
 
-
+const onToggle = (obj: any) => {
+  props.onToggle(obj)
+}
   
-  const { questionNumber = 0, question = 'text', answers = ['option 01', 'option 02'], onToggle = () => '' as any} = props as any
+  const { questionNumber = 0, question = 'text', answers = ['option 01', 'option 02']} = props as any
   return <div>
           <h1>{question}</h1>
-          <ButtonGroup list={answers} activeMenuIdx={-1} />
-          
+          <ButtonGroup onToggle={onToggle}questionNumber={questionNumber} list={answers} activeMenuIdx={-1} />
         </div>
 }
 
-function QuizList() {
+
+
+function QuizList(props) {
   const {fetchListData:list ={}} = React.useContext(QuizContext)
   const onToggle = (obj = {}) => {
     if(obj){
-      list[obj.questionNumber].choosed = obj.index
+      list[obj.questionNumber].choosed = obj.answer
+      props.onChange()
     }
+    
   }
   return list.length > 0 ? list.map((item, index) => {
     return <React.Fragment key={`item_${index}`}><QuizTemplate questionNumber={index} answers={item.answers} question={item.question} onToggle={onToggle} /></React.Fragment>
@@ -126,15 +133,22 @@ const Button = styled.button`
     margin-top: 40px;
    
   `
+const [isActive, setIsActive] = React.useState(false)
+const {fetchListData = []} = React.useContext(QuizContext)
 
-const config = [{}, {}, {}, {}, {}]
+
+
+  const onChange = () => {
+  }
+
+
   return (
     <Main>
     <h1>Select Any One Option</h1>
     
-    <QuizList />
-    <Link href="/result">
-        <Button> Submit </Button>
+    <QuizList onChange={onChange} />
+   <Link href="/result">
+         <Button> Submit </Button>
       </Link>
   </Main>
   )
@@ -149,3 +163,4 @@ Quiz.getInitialProps = async ()  => {
 
 export { Quiz }
 export default Quiz
+

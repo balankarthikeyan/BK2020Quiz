@@ -64,8 +64,9 @@ class MyApp extends App {
     const AppText = () => {
 
       const [fetchListData, setFetchListData] = React.useState(this.getData() || [])
-    
       const contextProps = {fetchListData}
+
+      React.useEffect(()=>{},[fetchListData])
       return <QuizContext.Provider value={contextProps}>
       <Container>
         <AppGlobalStyles />

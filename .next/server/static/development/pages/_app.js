@@ -152,7 +152,7 @@ function Footer() {
 /*!************************************!*\
   !*** ./components/Footer/index.ts ***!
   \************************************/
-/*! exports provided: default, FooterWrapper, Heading, Footer */
+/*! exports provided: FooterWrapper, Heading, Footer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,7 +245,7 @@ function Header() {
 /*!************************************!*\
   !*** ./components/Header/index.ts ***!
   \************************************/
-/*! exports provided: default, HeaderWrapper, Heading, Logo, Header */
+/*! exports provided: HeaderWrapper, Heading, Logo, Header, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1418,41 +1418,42 @@ function (_App) {
         var contextProps = {
           fetchListData: fetchListData
         };
+        react__WEBPACK_IMPORTED_MODULE_10__["useEffect"](function () {}, [fetchListData]);
         return react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_GlobalContext_context__WEBPACK_IMPORTED_MODULE_15__["QuizContext"].Provider, {
           value: contextProps,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 69
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 70
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](AppGlobalStyles, {
+        }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](next_app__WEBPACK_IMPORTED_MODULE_11__["Container"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 71
           },
           __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_components_Header__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        }, react__WEBPACK_IMPORTED_MODULE_10__["createElement"](AppGlobalStyles, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 72
           },
           __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_components_Header__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73
+          },
+          __self: this
         }), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 74
+            lineNumber: 75
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_10__["createElement"](_components_Footer__WEBPACK_IMPORTED_MODULE_14__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 76
           },
           __self: this
         })));
@@ -1461,7 +1462,7 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_10__["createElement"](AppText, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         },
         __self: this
       });

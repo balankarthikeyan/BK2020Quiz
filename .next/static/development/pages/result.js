@@ -7137,16 +7137,17 @@ function Result() {
   })(["width:70%;margin:auto;text-align:center;"]);
   var Data = react__WEBPACK_IMPORTED_MODULE_2___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_4__["QuizContext"]); // const {isServer = false} = props as any
 
+  console.log('result', Data);
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Main, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
   }, "Result"));

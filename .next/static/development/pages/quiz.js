@@ -13852,7 +13852,6 @@ function QuizTemplate() {
   })(["padding:10px 20px;background:#b2b2b2;color:black;text-transform:uppercase;font-size:1vw;border:none;margin:5px;", ";"], function (props) {
     return props.active && Object(styled_components__WEBPACK_IMPORTED_MODULE_6__["css"])(["background:black;color:white;"]);
   });
-  var pushed = [];
 
   var ButtonGroup = function ButtonGroup(props) {
     var _ref = props,
@@ -13862,7 +13861,13 @@ function QuizTemplate() {
         _ref$shouldToggle = _ref.shouldToggle,
         shouldToggle = _ref$shouldToggle === void 0 ? false : _ref$shouldToggle,
         renderTabItemMenu = _ref.renderTabItemMenu,
-        remainingProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref, ["list", "activeMenuIdx", "shouldToggle", "renderTabItemMenu"]);
+        _ref$onToggle = _ref.onToggle,
+        onToggle = _ref$onToggle === void 0 ? function () {
+      return '';
+    } : _ref$onToggle,
+        _ref$questionNumber = _ref.questionNumber,
+        questionNumber = _ref$questionNumber === void 0 ? -1 : _ref$questionNumber,
+        remainingProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref, ["list", "activeMenuIdx", "shouldToggle", "renderTabItemMenu", "onToggle", "questionNumber"]);
 
     var _React$useState = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(activeMenuIdx),
         _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
@@ -13878,6 +13883,11 @@ function QuizTemplate() {
       } else {
         setActiveTabIdx(curMenuIdx);
       }
+
+      onToggle({
+        questionNumber: questionNumber,
+        answer: curMenuIdx
+      });
     };
 
     var renderButtonGroup = function renderButtonGroup(item, index) {
@@ -13888,7 +13898,7 @@ function QuizTemplate() {
         key: "button-menu-".concat(index),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
@@ -13900,7 +13910,7 @@ function QuizTemplate() {
         active: activeTabIdx === index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 68
         },
         __self: this
       }, children));
@@ -13910,10 +13920,14 @@ function QuizTemplate() {
       className: "base-button-menu-panel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 86
       },
       __self: this
     }, list && list.map(renderButtonGroup));
+  };
+
+  var onToggle = function onToggle(obj) {
+    props.onToggle(obj);
   };
 
   var _ref2 = props,
@@ -13922,35 +13936,33 @@ function QuizTemplate() {
       _ref2$question = _ref2.question,
       question = _ref2$question === void 0 ? 'text' : _ref2$question,
       _ref2$answers = _ref2.answers,
-      answers = _ref2$answers === void 0 ? ['option 01', 'option 02'] : _ref2$answers,
-      _ref2$onToggle = _ref2.onToggle,
-      onToggle = _ref2$onToggle === void 0 ? function () {
-    return '';
-  } : _ref2$onToggle;
+      answers = _ref2$answers === void 0 ? ['option 01', 'option 02'] : _ref2$answers;
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 98
     },
     __self: this
   }, question), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(ButtonGroup, {
+    onToggle: onToggle,
+    questionNumber: questionNumber,
     list: answers,
     activeMenuIdx: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 99
     },
     __self: this
   }));
 }
 
-function QuizList() {
+function QuizList(props) {
   var _React$useContext = react__WEBPACK_IMPORTED_MODULE_4___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_7__["QuizContext"]),
       _React$useContext$fet = _React$useContext.fetchListData,
       list = _React$useContext$fet === void 0 ? {} : _React$useContext$fet;
@@ -13959,7 +13971,8 @@ function QuizList() {
     var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     if (obj) {
-      list[obj.questionNumber].choosed = obj.index;
+      list[obj.questionNumber].choosed = obj.answer;
+      props.onChange();
     }
   };
 
@@ -13968,7 +13981,7 @@ function QuizList() {
       key: "item_".concat(index),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 115
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizTemplate, {
@@ -13978,7 +13991,7 @@ function QuizList() {
       onToggle: onToggle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 115
       },
       __self: this
     }));
@@ -13999,36 +14012,48 @@ function Quiz() {
     displayName: "quiz__Button",
     componentId: "sc-12jkv1r-2"
   })(["padding:10px 20px;background:black;color:white;text-transform:uppercase;font-size:1vw;border:none;margin:5px;margin-top:40px;"]);
-  var config = [{}, {}, {}, {}, {}];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(false),
+      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState3, 2),
+      isActive = _React$useState4[0],
+      setIsActive = _React$useState4[1];
+
+  var _React$useContext2 = react__WEBPACK_IMPORTED_MODULE_4___default.a.useContext(_GlobalContext_context__WEBPACK_IMPORTED_MODULE_7__["QuizContext"]),
+      _React$useContext2$fe = _React$useContext2.fetchListData,
+      fetchListData = _React$useContext2$fe === void 0 ? [] : _React$useContext2$fe;
+
+  var onChange = function onChange() {};
+
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Main, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 146
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 147
     },
     __self: this
   }, "Select Any One Option"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizList, {
+    onChange: onChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 149
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/result",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 150
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 151
     },
     __self: this
   }, " Submit ")));
