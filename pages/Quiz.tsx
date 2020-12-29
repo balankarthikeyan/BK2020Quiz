@@ -21,30 +21,36 @@ import exampleQuestions from '../data/exampleQuestions'
   
 
   .answer-ui {
-    width: 60%;
+    width: 50%;
     margin: auto;
+    
 
     .selected {
-      background-color:#ffaeae;
-      &::before {
+      /* background-color:#ffaeae; */
+      &::after {
       content: 'Selected Wrong';
-      padding-right:10px;
+      padding-left:10px;
       font-weight:bold;
       color:red;
       }
     }
     .correct {
-    background-color:#2cdc5c;
+    /* background-color:#2cdc5c; */
   }
     .correct.selected {
-      &::before {
+      &::after {
       content: 'Selected Correct';
-      padding-right:10px;
+      padding-left:10px;
       font-weight:bold;
-      color:black;
+      color:green;
       }
     }
   }
+  .card-ui {
+    box-shadow: 2px 1px 6px;
+    padding: 20px;
+    margin: 20px;
+}
 `
 
       return(

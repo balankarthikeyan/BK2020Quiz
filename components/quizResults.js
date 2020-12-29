@@ -27,12 +27,11 @@ class QuizResults extends React.Component {
       }`
 
       return (
-        <>
+        <div className="card-ui">
           <h2>{title}</h2>
           <div className={` answer-ui`}>
             <div className="">
               {question.answers.map((itemAnswer, answeIndex) => {
-                console.log()
                 return (
                   <p
                     className={`${
@@ -53,7 +52,7 @@ class QuizResults extends React.Component {
             isResult={true}
             onAnswer={() => {}}
           /> */}
-        </>
+        </div>
       )
     })
   }

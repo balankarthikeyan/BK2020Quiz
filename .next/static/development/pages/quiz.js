@@ -465,7 +465,14 @@ function (_React$Component) {
         console.log(questionAnswerIndex);
         var className = '';
         className = "".concat(questionAnswerIndex === question.correct === true ? 'correct' : 'incorrect');
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "card-ui",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 31
@@ -486,12 +493,11 @@ function (_React$Component) {
           },
           __self: this
         }, question.answers.map(function (itemAnswer, answeIndex) {
-          console.log();
           return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
             className: "".concat(answeIndex === question.correct ? 'correct' : '', " ").concat(answeIndex === questionAnswerIndex ? 'selected' : ''),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 37
+              lineNumber: 36
             },
             __self: this
           }, itemAnswer);
@@ -508,21 +514,21 @@ function (_React$Component) {
         className: "mw6 center tc",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         className: "f4 gray",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 67
         },
         __self: this
       }, "Answers"), this.renderAnswers(), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 69
         },
         __self: this
       }, "Back"));
@@ -547,29 +553,21 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   questions: [{
-    title: 'Are you a spender or a saver?',
-    answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
+    title: 'Can you access Cookie using javascript?',
+    answers: ['True', 'False'],
+    correct: 0
+  }, {
+    title: 'How can you get the total number of arguments passed to a function?',
+    answers: ['Using args.length property', 'Using arguments.length property', 'Both of the above', 'None of the above'],
     correct: 1
   }, {
-    title: 'Which is more important: freedom or security?',
-    answers: ["I'm currently a full-time employee", "I'm currently a full-time employee with a side gig", "I'm currently working as a freelancer or am a part-time employee", "I'm not currently employed"],
+    title: 'Which built-in method returns the index within the calling String object of the first occurrence of the specified value?',
+    answers: ['getIndex()', 'location()', 'indexOf()', 'None of the above.'],
     correct: 2
   }, {
-    title: 'Are you a spender or a saver?',
-    answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
+    title: 'Which built-in method reverses the order of the elements of an array?',
+    answers: ['changeOrder(order)', 'reverse()', 'sort(order)', 'None of the above.'],
     correct: 1
-  }, {
-    title: 'Which is more important: freedom or security?',
-    answers: ["I'm currently a full-time employee", "I'm currently a full-time employee with a side gig", "I'm currently working as a freelancer or am a part-time employee", "I'm not currently employed"],
-    correct: 2
-  }, {
-    title: 'Are you a spender or a saver?',
-    answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
-    correct: 1
-  }, {
-    title: 'Which is more important: freedom or security?',
-    answers: ["I'm currently a full-time employee", "I'm currently a full-time employee with a side gig", "I'm currently working as a freelancer or am a part-time employee", "I'm not currently employed"],
-    correct: 2
   }]
 });
 
@@ -14717,18 +14715,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.answer-ui{width:60%;margin:auto;.selected{background-color:#ffaeae;&::before{content:'Selected Wrong';padding-right:10px;font-weight:bold;color:red;}}.correct{background-color:#2cdc5c;}.correct.selected{&::before{content:'Selected Correct';padding-right:10px;font-weight:bold;color:black;}}}"]);
+      })(["width:70%;margin:auto;text-align:center;.answer-ui{width:50%;margin:auto;.selected{&::after{content:'Selected Wrong';padding-left:10px;font-weight:bold;color:red;}}.correct{}.correct.selected{&::after{content:'Selected Correct';padding-left:10px;font-weight:bold;color:green;}}}.card-ui{box-shadow:2px 1px 6px;padding:20px;margin:20px;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 57
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 58
         },
         __self: this
       }));
