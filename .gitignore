@@ -8,6 +8,7 @@ build/
 
 # OSX
 *.DS_Store
+*.next
 .AppleDouble
 .LSOverride
 ._*

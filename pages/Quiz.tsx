@@ -9,7 +9,7 @@ import {QuizContext} from '../GlobalContext/context'
 
 
 
-function QuizTemplate(props = {}) {
+function QuizTemplate(props:any = {}) {
   const Button = styled.button`
     padding: 10px 20px;
     background: #b2b2b2;
@@ -25,71 +25,67 @@ function QuizTemplate(props = {}) {
     color: white;
       `};
   `
-
   let pushed = []
 
+  const  ButtonGroup = (props: any) => {
+    const {
+      list,
+      activeMenuIdx = 0,
+      shouldToggle = false,
+      renderTabItemMenu,
+      ...remainingProps
+    } = props as any
+    const [activeTabIdx, setActiveTabIdx] = React.useState(activeMenuIdx)
 
-const  ButtonGroup = (props: any) => {
-  const {
-    list,
-    activeMenuIdx = 0,
-    shouldToggle = false,
-    renderTabItem,
-    renderTabItemMenu,
-    renderTabItemContent,
-    ...remainingProps
-  } = props
-  const [activeTabIdx, setActiveTabIdx] = React.useState(activeMenuIdx)
-
-  const onTabMenuClick = (e: any) => {
-    e.preventDefault()
-    const curMenuIdx = +e.currentTarget.getAttribute('data-key')
-    if (curMenuIdx === activeTabIdx && shouldToggle === true) {
-      setActiveTabIdx(-1)
-    } else {
-      setActiveTabIdx(curMenuIdx)
+    const onTabMenuClick = (e: any) => {
+      e.preventDefault()
+      const curMenuIdx = +e.currentTarget.getAttribute('data-key')
+      if (curMenuIdx === activeTabIdx && shouldToggle === true) {
+        setActiveTabIdx(-1)
+      } else {
+        setActiveTabIdx(curMenuIdx)
+      }
     }
-  }
 
-  const renderButtonGroup = (item: any, index: number) => {
-    const title = item
-    const titleClassName =
-      'button-menu-title' +
-      (activeTabIdx === index
-        ? ` active${!shouldToggle ? ' prevent' : ''}`
-        : '')
-    const children =
-      renderTabItemMenu !== undefined
-        ? renderTabItemMenu(title, index)
-        : title
-        ? title
-        : `Tab ${index}`
+    const renderButtonGroup = (item: any, index: number) => {
+      const title = item
+      const titleClassName =
+        'button-menu-title' +
+        (activeTabIdx === index
+          ? ` active${!shouldToggle ? ' prevent' : ''}`
+          : '')
+      const children =
+        renderTabItemMenu !== undefined
+          ? renderTabItemMenu(title, index)
+          : title
+          ? title
+          : `Tab ${index}`
+
+      return (
+        <React.Fragment key={`button-menu-${index}`}>
+          <Button
+            title={title}
+            className={titleClassName}
+            onClick={onTabMenuClick}
+            data-key={index}
+            role="navigation"
+            active={activeTabIdx === index}
+          >
+            {children}
+          </Button>
+        </React.Fragment>
+      )
+    }
+
+
+
 
     return (
-      <React.Fragment key={`button-menu-${index}`}>
-        <Button
-          title={title}
-          className={titleClassName}
-          onClick={onTabMenuClick}
-          data-key={index}
-          role="navigation"
-          active={activeTabIdx === index}
-        >
-          {children}
-        </Button>
-      </React.Fragment>
+        <section className="base-button-menu-panel">
+          {list && list.map(renderButtonGroup)}
+        </section>
     )
   }
-
-
-
-
-  return (
-      <section className="base-button-menu-panel">
-        {list && list.map(renderButtonGroup)}
-      </section>
-  )
-}
 
 
   

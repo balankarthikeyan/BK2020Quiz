@@ -993,15 +993,14 @@ function QuizTemplate() {
   var pushed = [];
 
   var ButtonGroup = function ButtonGroup(props) {
-    var list = props.list,
-        _props$activeMenuIdx = props.activeMenuIdx,
-        activeMenuIdx = _props$activeMenuIdx === void 0 ? 0 : _props$activeMenuIdx,
-        _props$shouldToggle = props.shouldToggle,
-        shouldToggle = _props$shouldToggle === void 0 ? false : _props$shouldToggle,
-        renderTabItem = props.renderTabItem,
-        renderTabItemMenu = props.renderTabItemMenu,
-        renderTabItemContent = props.renderTabItemContent,
-        remainingProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(props, ["list", "activeMenuIdx", "shouldToggle", "renderTabItem", "renderTabItemMenu", "renderTabItemContent"]);
+    var _ref = props,
+        list = _ref.list,
+        _ref$activeMenuIdx = _ref.activeMenuIdx,
+        activeMenuIdx = _ref$activeMenuIdx === void 0 ? 0 : _ref$activeMenuIdx,
+        _ref$shouldToggle = _ref.shouldToggle,
+        shouldToggle = _ref$shouldToggle === void 0 ? false : _ref$shouldToggle,
+        renderTabItemMenu = _ref.renderTabItemMenu,
+        remainingProps = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_3__["default"])(_ref, ["list", "activeMenuIdx", "shouldToggle", "renderTabItemMenu"]);
 
     var _React$useState = react__WEBPACK_IMPORTED_MODULE_4___default.a.useState(activeMenuIdx),
         _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
@@ -1027,7 +1026,7 @@ function QuizTemplate() {
         key: "button-menu-".concat(index),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
@@ -1039,7 +1038,7 @@ function QuizTemplate() {
         active: activeTabIdx === index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 66
         },
         __self: this
       }, children));
@@ -1049,33 +1048,33 @@ function QuizTemplate() {
       className: "base-button-menu-panel",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 84
       },
       __self: this
     }, list && list.map(renderButtonGroup));
   };
 
-  var _ref = props,
-      _ref$questionNumber = _ref.questionNumber,
-      questionNumber = _ref$questionNumber === void 0 ? 0 : _ref$questionNumber,
-      _ref$question = _ref.question,
-      question = _ref$question === void 0 ? 'text' : _ref$question,
-      _ref$answers = _ref.answers,
-      answers = _ref$answers === void 0 ? ['option 01', 'option 02'] : _ref$answers,
-      _ref$onToggle = _ref.onToggle,
-      onToggle = _ref$onToggle === void 0 ? function () {
+  var _ref2 = props,
+      _ref2$questionNumber = _ref2.questionNumber,
+      questionNumber = _ref2$questionNumber === void 0 ? 0 : _ref2$questionNumber,
+      _ref2$question = _ref2.question,
+      question = _ref2$question === void 0 ? 'text' : _ref2$question,
+      _ref2$answers = _ref2.answers,
+      answers = _ref2$answers === void 0 ? ['option 01', 'option 02'] : _ref2$answers,
+      _ref2$onToggle = _ref2.onToggle,
+      onToggle = _ref2$onToggle === void 0 ? function () {
     return '';
-  } : _ref$onToggle;
+  } : _ref2$onToggle;
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 94
     },
     __self: this
   }, question), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(ButtonGroup, {
@@ -1083,7 +1082,7 @@ function QuizTemplate() {
     activeMenuIdx: -1,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 95
     },
     __self: this
   }));
@@ -1107,7 +1106,7 @@ function QuizList() {
       key: "item_".concat(index),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 108
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizTemplate, {
@@ -1117,7 +1116,7 @@ function QuizList() {
       onToggle: onToggle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 108
       },
       __self: this
     }));
@@ -1142,32 +1141,32 @@ function Quiz() {
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Main, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 133
     },
     __self: this
   }, "Select Any One Option"), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(QuizList, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 135
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
     href: "/result",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 136
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Button, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 137
     },
     __self: this
   }, " Submit ")));
