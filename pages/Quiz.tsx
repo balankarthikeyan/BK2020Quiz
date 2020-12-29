@@ -18,15 +18,17 @@ import exampleQuestions from '../data/exampleQuestions'
   width: 70%;
   margin: auto;
   text-align: center;
-  .correct, .incorrect {
-    padding: 10px;
-  }
-  /* .correct {
-    background-color:green;
+   .correct {
+    background-color:#2cdc5c;
   }
   .incorrect {
-    background-color:red;
-  } */
+    background-color:#ffaeae;
+  } 
+
+  .answer-ui {
+    width: 60%;
+    margin: auto;
+  }
 `
 
       return(

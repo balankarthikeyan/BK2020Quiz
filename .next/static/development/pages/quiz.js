@@ -132,7 +132,7 @@ var _jsxFileName = "/Users/karthikeyan.b15/Personal/Quiz/BKQuiz/components/quest
   }
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: className,
+    className: "".concat(className, " answer-ui"),
     onClick: function onClick() {
       return onAnswer(id);
     },
@@ -531,6 +531,22 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   questions: [{
+    title: 'Are you a spender or a saver?',
+    answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
+    correct: 1
+  }, {
+    title: 'Which is more important: freedom or security?',
+    answers: ["I'm currently a full-time employee", "I'm currently a full-time employee with a side gig", "I'm currently working as a freelancer or am a part-time employee", "I'm not currently employed"],
+    correct: 2
+  }, {
+    title: 'Are you a spender or a saver?',
+    answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
+    correct: 1
+  }, {
+    title: 'Which is more important: freedom or security?',
+    answers: ["I'm currently a full-time employee", "I'm currently a full-time employee with a side gig", "I'm currently working as a freelancer or am a part-time employee", "I'm not currently employed"],
+    correct: 2
+  }, {
     title: 'Are you a spender or a saver?',
     answers: ['In the past year, I have always paid my credit card bill in full each month', 'In the past year, I have sometimes held a monthly credit card debt'],
     correct: 1
@@ -14685,18 +14701,18 @@ function (_React$Component) {
       styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].main.withConfig({
         displayName: "quiz__Main",
         componentId: "sc-12jkv1r-0"
-      })(["width:70%;margin:auto;text-align:center;.correct,.incorrect{padding:10px;}"]);
+      })(["width:70%;margin:auto;text-align:center;.correct{background-color:#2cdc5c;}.incorrect{background-color:#ffaeae;}.answer-ui{width:60%;margin:auto;}"]);
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_quiz_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         data: this.props,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 36
         },
         __self: this
       }));
