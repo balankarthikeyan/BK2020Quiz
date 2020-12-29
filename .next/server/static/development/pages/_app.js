@@ -152,7 +152,7 @@ function Footer() {
 /*!************************************!*\
   !*** ./components/Footer/index.ts ***!
   \************************************/
-/*! exports provided: default, FooterWrapper, Heading, Footer */
+/*! exports provided: FooterWrapper, Heading, Footer, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -245,7 +245,7 @@ function Header() {
 /*!************************************!*\
   !*** ./components/Header/index.ts ***!
   \************************************/
-/*! exports provided: default, HeaderWrapper, Heading, Logo, Header */
+/*! exports provided: HeaderWrapper, Heading, Logo, Header, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1398,7 +1398,7 @@ function (_App) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_5__["default"])(MyApp, [{
     key: "getData",
     value: function getData() {
-      return __webpack_require__(/*! ../questions.json */ "./questions.json");
+      return {};
     }
   }, {
     key: "render",
@@ -1517,17 +1517,6 @@ function (_App) {
 }(next_app__WEBPACK_IMPORTED_MODULE_11___default.a);
 
 /* harmony default export */ __webpack_exports__["default"] = (MyApp);
-
-/***/ }),
-
-/***/ "./questions.json":
-/*!************************!*\
-  !*** ./questions.json ***!
-  \************************/
-/*! exports provided: 0, 1, default */
-/***/ (function(module) {
-
-module.exports = [{"type":"CHOOSE","question":"Apple","answers":["fruit","veg","none"],"correct":2,"choosed":0},{"type":"CHOOSE","question":"Apple1","answers":["fruit","veg","none"],"correct":2,"choosed":0}];
 
 /***/ }),
 

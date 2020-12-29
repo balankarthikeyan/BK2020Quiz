@@ -55,7 +55,7 @@ class MyApp extends App {
   }
 
   getData() {
-    return require("../questions.json")
+    return {}
   }
 
   render() {
